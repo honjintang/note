@@ -2,10 +2,13 @@
   function NoteList() {
     this.notes = [];
   }
+
   NoteList.prototype.returnNotes = function() {
+    allElements = "";
     for (i = 0; i < this.notes.length; i++) {
-      return this.notes[i];
+        allElements += this.notes[i] + '\b';
     }
+    return allElements;
   };
 
   NoteList.prototype.addNote = function(note) {
